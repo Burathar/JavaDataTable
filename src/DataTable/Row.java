@@ -21,7 +21,7 @@ public class Row {
 		for (int i = 0; i < items.length; i++) {
 			if(columns.get(i).checkThingy(items[i])){
 				columns.get(i).addRow(this, items[i]);
-			}
+			}//test
 			
 		}
 	}
