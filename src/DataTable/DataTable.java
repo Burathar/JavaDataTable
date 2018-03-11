@@ -1,4 +1,4 @@
-package DataTable;
+package dataTable;
 
 import java.util.*;
 
@@ -15,17 +15,18 @@ public class DataTable {
 	}
 	
 	public DataTable(Column... columns){
-    	this.columns = new LinkedList<Column>(Arrays.asList(columns));
+    	this.columns = new LinkedList<>(Arrays.asList(columns));
     }
     
-    public void addColumn(Column<?> column){
-		columns.add(column);
+    public void addColumn(String name, Object... items){
+		if(items.length != rows.size())
+			throw new IllegalArgumentException("The amount of arguments are not equal to the amount of rows.");
+		columns.add(new Column(rows, name, items));
     }
     
     public void addRow(Object... items){
         if(items.length != columns.size())
             throw new IllegalArgumentException("The amount of arguments are not equal to the amount of columns.");
-        Row row = new Row(items);
-        rows.add(row);
+        rows.add( new Row(columns, items));
     }
 }

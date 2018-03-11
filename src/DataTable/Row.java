@@ -1,4 +1,4 @@
-package DataTable;
+package dataTable;
 
 import java.util.Collections;
 import java.util.LinkedList;
@@ -17,12 +17,16 @@ public class Row {
 		return Collections.unmodifiableList(cells);
 	}
 	
-	Row(Object... items){
+	Row(List<Column> columns, Object... items){
+		this.columns = columns;
 		for (int i = 0; i < items.length; i++) {
-			if(columns.get(i).checkThingy(items[i])){
-				columns.get(i).addRow(this, items[i]);
-			}//test
-			
+			columns.get(i).addRow(this, items[i]);
+			cells.add(items[i]);
 		}
+	}
+	
+	public void addColumn(Column column, Object item) {
+		columns.add(column);
+		cells.add(item);
 	}
 }

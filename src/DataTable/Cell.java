@@ -1,4 +1,4 @@
-package DataTable;
+package dataTable;
 
 public class Cell<T> {
 	private Row row;

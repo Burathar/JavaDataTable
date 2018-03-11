@@ -1,7 +1,9 @@
 package main;
 
-import DataTable.Column;
-import DataTable.DataTable;
+import consoleTable.ConsoleTable;
+import dataTable.DataTable;
+
+import java.io.Console;
 
 public class Main {
 
@@ -10,17 +12,19 @@ public class Main {
         System.out.println();
         System.out.println("Integer Types:");
         DataTable table = createIntDataTable();
+	    ConsoleTable.drawTable(table, 80);
+
     }
     
     private static DataTable createIntDataTable(){
     	DataTable table = new DataTable();
-    	table.addColumn(new Column<String>("Data Type"));
-    	table.addColumn(new Column<String>("Primitive Type"));
-    	table.addColumn(new Column<>("Min Value"));
-    	table.addColumn(new Column<>("Max Value"));
-    	table.addRow("byte", "Byte", Byte.MAX_VALUE, Byte.MIN_VALUE);
-    	table.addRow("short", "Short", Short.MAX_VALUE, Short.MIN_VALUE);
-    	table.addRow("int", "Integer", Integer.MAX_VALUE, Integer.MIN_VALUE);
+    	table.addColumn("Data Type");
+    	table.addColumn("Primitive Type");
+    	table.addColumn("Min Value");
+    	table.addColumn("Max Value");
+    	table.addRow("Byte", "byte", Byte.MIN_VALUE, Byte.MAX_VALUE);
+    	table.addRow("Short", "short", Short.MIN_VALUE, Short.MAX_VALUE);
+    	table.addRow("Integer", "int", Integer.MIN_VALUE, Integer.MAX_VALUE);
     	return table;
     	
     }
