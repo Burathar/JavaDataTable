@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Column{
     private String name;
-    private List<Row> rows = new LinkedList<>();
+    private List<Row> rows;
     private List<Object> cells = new LinkedList<>();
     //private List<Cell<T>> cells = new LinkedList<>();
 	
@@ -37,9 +37,6 @@ public class Column{
 	}
 	
 	public boolean checkThingy(Object item){
-    	if(item == null){
-    		return false;
-	    }
-	    return true;
+		return item != null;
 	}
 }

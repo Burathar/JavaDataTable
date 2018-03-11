@@ -5,9 +5,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Row {
-	private List<Column> columns = new LinkedList<>();
+	private List<Column> columns;
 	private List<Object> cells = new LinkedList<>();
-	//private List<Cell> cells = new LinkedList<>();
+	/* private List<Cell> cells = new LinkedList<>(); */
 	
 	public List<Column> getColumns() {
 		return Collections.unmodifiableList(columns);
