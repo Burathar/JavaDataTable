@@ -20,13 +20,12 @@ public class Row {
 	Row(List<Column> columns, Object... items){
 		this.columns = columns;
 		for (int i = 0; i < items.length; i++) {
-			columns.get(i).addRow(this, items[i]);
+			columns.get(i).addRow(items[i]);
 			cells.add(items[i]);
 		}
 	}
 	
-	public void addColumn(Column column, Object item) {
-		columns.add(column);
+	public void addColumn(Object item) {
 		cells.add(item);
 	}
 }

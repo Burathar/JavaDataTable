@@ -26,12 +26,12 @@ public class Column{
     	this.rows = rows;
 		this.name = name;
 		for (int i = 0; i < items.length; i++) {
-			rows.get(i).addColumn(this, items[i]);
+			rows.get(i).addColumn(items[i]);
 			cells.add(items[i]);
 		}
 	}
 	
-	public void addRow(Row row, Object item) {
+	public void addRow(Object item) {
 		cells.add(item);
 	}
 }
