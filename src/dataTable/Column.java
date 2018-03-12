@@ -32,11 +32,6 @@ public class Column{
 	}
 	
 	public void addRow(Row row, Object item) {
-    	rows.add(row);
 		cells.add(item);
-	}
-	
-	public boolean checkThingy(Object item){
-		return item != null;
 	}
 }

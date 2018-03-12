@@ -1,9 +1,7 @@
 package consoleTable;
 
-import dataTable.Column;
 import dataTable.DataTable;
 import dataTable.Row;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
