@@ -6,7 +6,7 @@ import dataTable.DataTable;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("This application shows the minimum and maximum values of different C# datatypes");
+        System.out.println("This application shows the minimum and maximum values of different Java 9.0 datatypes");
         System.out.println();
         System.out.println("Integer Types:");
         DataTable table = createIntDataTable();
